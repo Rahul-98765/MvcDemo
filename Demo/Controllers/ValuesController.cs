@@ -10,14 +10,18 @@ namespace Demo.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
+        
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2","value3", "value4","value5" };
+              return new string[] { "value1", "value2","value3", "value4","value5" };
         }
 
         // GET api/values/5
         public string Get(int id)
         {
+            if(id < 5){
+             return "Small value"
+            }
             return "value1290";
         }
 
